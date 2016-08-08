@@ -1,0 +1,40 @@
+<div class="row" ng-hide="contact._id">
+  <div class="col-md-12 heading2">
+      <h2>Create A New Contact</h2>
+  </div>
+</div>
+<div class="container buttons3">
+    <div>
+        <p>
+            <label>First Name (required)</label> 
+            <input id="name" class="form-control" type="text" ng-model="contact.firstName" required> 
+        </p>
+        <p>
+            <label>Last Name (required)</label> 
+            <input id="name" class="form-control" type="text" ng-model="contact.lastName" required> 
+        </p>
+        <p>
+            <label>Email (required)</label> 
+            <input id="name" class="form-control" type="text" ng-model="contact.email" required> 
+        </p>
+        <p>
+            <label>Phone</label> 
+            <input id="name" class="form-control" type="text" ng-model="contact.phone.mobile"> 
+        </p>
+        <p>
+            <label>Address</label> 
+            <input id="name" class="form-control" type="text" ng-model="contact.address"> 
+        </p>
+        <input type="hidden" ng-model="contact.hidden" value="1">
+    </div>
+    <div class="row buttons3 heading2">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+            <button class="btn btn-primary" ng-click="saveContact(contact)">Save Contact</button>
+        </div>
+        <div class="2">
+            <button class="btn btn-primary" ng-click="back()">Back</button>
+        </div>
+    </div>    
+</div>

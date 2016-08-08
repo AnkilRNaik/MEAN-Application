@@ -1,0 +1,38 @@
+<div class="container">
+    <div class = "row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+            <h2 class="heading2">{{ contact.firstName }} {{ contact.lastName }}</h2>
+        </div>
+        <div class="col-md-2">
+        </div>
+    </div>
+</div>
+<div ng-hide="editMode" class="container">
+    <div class="row heading2">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+            <p ng-if="contact.email">Email: <a ng-href="mailto:{{ contact.email }}" target="_blank">{{ contact.email }}</a></p>
+            <p ng-if="contact.phone.mobile">Phone: {{ contact.phone.mobile }} </p>
+            <p ng-if="contact.address"> Address: {{ contact.address }} </p>
+        </div>
+        <div class="col-md-2">
+        </div>
+    </div>
+    <div class="row buttons2 heading2">
+        <div class="col-md-2">
+            <button class="btn btn-primary" ng-click="toggleEdit()">Edit Contact</button>
+        </div>
+        <div class="col-md-8">    
+            <a class="btn btn-primary" href="#/list">Back</a>
+        </div>
+        <div class="col-md-2">
+            <a href="#/list"><button class="btn btn-primary" ng-click="deleteContact(contact._id)">Delete Contact</button></a>    
+        </div>
+    </div>
+</div>
+<!-- Contact form -->
+<div ng-include="contactFormUrl">
+</div>
